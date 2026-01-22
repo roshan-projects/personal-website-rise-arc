@@ -7322,3 +7322,51 @@ section { padding: 80px 0; }
 
 
 
+
+
+
+/* MAIN LOGO */
+.navbar-logo {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+
+  display: flex;
+  flex-direction: column; /* tagline below */
+  align-items: flex-start;
+}
+
+/* RISE ARC wrapper */
+.logo-main {
+  display: inline-flex;
+  gap: 6px;
+}
+
+/* RISE - white */
+.logo-main .rise {
+  color: var(--white);
+}
+
+/* ARC - gold gradient */
+.logo-main .arc {
+  background: linear-gradient(
+    180deg,
+    #fff1b0,
+    var(--gold),
+    #9e6b1f
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* TAGLINE */
+.logo-tagline {
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  margin-top: 4px;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
