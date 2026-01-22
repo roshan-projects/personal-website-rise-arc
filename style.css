@@ -7241,13 +7241,14 @@ section { padding: 80px 0; }
 .navbar-logo {
   display: flex;
   align-items: center;
+  height: 100px;
 }
 
 .navbar-logo-img {
   max-height: 56px;     /* keep as-is */
   width: auto;
   display: block;
-
+  
   transform: scale(1.5);   /* 🔥 ONLY SIZE INCREASE */
   transform-origin: left center;
   transform: scale(1.7);
