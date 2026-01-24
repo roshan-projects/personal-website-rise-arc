@@ -7370,3 +7370,453 @@ section { padding: 80px 0; }
   text-transform: uppercase;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+   MOBILE VIEW ONLY (SAFE)
+===================================== */
+@media (max-width: 768px) {
+
+  /* ---------- NAVBAR ---------- */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #000;
+    z-index: 9999;
+  }
+
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* HAMBURGER ICON */
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    width: 26px;
+    height: 3px;
+    background: #fff;
+    border-radius: 3px;
+  }
+
+  /* MOBILE MENU */
+  .navbar-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    flex-direction: column;
+    padding: 15px 0;
+    display: none;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+    animation: slideDown 0.35s ease forwards;
+  }
+
+  .navbar-menu li {
+    padding: 14px 25px;
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeInUp 0.4s ease forwards;
+  }
+
+  /* ONE-BY-ONE MENU ANIMATION */
+  .navbar-menu li:nth-child(1) { animation-delay: 0.1s; }
+  .navbar-menu li:nth-child(2) { animation-delay: 0.2s; }
+  .navbar-menu li:nth-child(3) { animation-delay: 0.3s; }
+  .navbar-menu li:nth-child(4) { animation-delay: 0.4s; }
+  .navbar-menu li:nth-child(5) { animation-delay: 0.5s; }
+
+  .navbar-menu li a {
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  /* ---------- HERO SECTION ---------- */
+  h1 {
+    font-size: 26px;
+    line-height: 1.35;
+    text-align: center;
+    margin-top: 90px;
+  }
+
+  p {
+    font-size: 14px;
+    text-align: center;
+    opacity: 0.85;
+  }
+
+  /* ---------- SPLINE ANIMATION ---------- */
+  iframe.spline-full {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    border: none;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Prevent overlap from navbar */
+  body {
+    padding-top: 70px;
+  }
+}
+
+/* =====================================
+   ANIMATIONS
+===================================== */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* =====================================
+   SERVICES SECTION – MOBILE ONLY
+===================================== */
+@media (max-width: 768px) {
+
+  /* SERVICES GRID */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  /* SERVICE CARD */
+  .service-card {
+    padding: 16px;
+    border-radius: 14px;
+    text-align: left;
+    min-height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  /* ICON */
+  .service-card .icon-box {
+    margin-bottom: 10px;
+  }
+
+  .service-card svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* TITLE */
+  .service-card .card-title {
+    font-size: 14px;
+    line-height: 1.3;
+    margin-bottom: 6px;
+  }
+
+  /* DESCRIPTION */
+  .service-card .card-desc {
+    font-size: 12px;
+    line-height: 1.5;
+    opacity: 0.85;
+  }
+
+}
+
+/* EXTRA SMALL PHONES (OPTIONAL SAFETY) */
+@media (max-width: 420px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =====================================
+   SERVICES SECTION – MOBILE ONLY
+===================================== */
+@media (max-width: 768px) {
+
+  /* GRID → 2 x 2 layout */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  /* SERVICE CARD */
+  .service-card {
+    padding: 16px;
+    border-radius: 14px;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* ICON */
+  .service-card .icon-box {
+    margin-bottom: 10px;
+  }
+
+  .service-card svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* TITLE */
+  .service-card .card-title {
+    font-size: 14px;
+    line-height: 1.35;
+    margin-bottom: 6px;
+  }
+
+  /* DESCRIPTION */
+  .service-card .card-desc {
+    font-size: 12px;
+    line-height: 1.5;
+    opacity: 0.85;
+    margin-bottom: 10px;
+  }
+
+  /* READ MORE */
+  .service-card .read-more {
+    font-size: 12px;
+    font-weight: 500;
+    color: #c9a45c; /* gold tone */
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: auto;
+  }
+
+  .service-card .read-more svg {
+    width: 14px;
+    height: 14px;
+  }
+
+}
+
+/* EXTRA SMALL DEVICES (OPTIONAL SAFETY) */
+@media (max-width: 420px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* =====================================
+   COMPARISON TABLE – MOBILE ONLY
+===================================== */
+@media (max-width: 768px) {
+
+  .table-container {
+    overflow-x: hidden;
+  }
+
+  .comparison-table {
+    width: 100%;
+    border-spacing: 0;
+  }
+
+  /* Hide table header */
+  .comparison-table thead {
+    display: none;
+  }
+
+  /* Convert rows to cards */
+  .comparison-table tr {
+    display: block;
+    margin-bottom: 16px;
+    background: #111;
+    border-radius: 14px;
+    padding: 14px;
+  }
+
+  /* Each cell stacked */
+  .comparison-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border: none;
+    font-size: 13px;
+  }
+
+  /* Feature title */
+  .comparison-table td:first-child {
+    font-weight: 600;
+    color: #fff;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    margin-bottom: 6px;
+    padding-bottom: 8px;
+  }
+
+  /* Labels before values */
+  .comparison-table td:nth-child(2)::before {
+    content: "Rise Arc";
+    color: #c9a45c;
+    font-weight: 500;
+  }
+
+  .comparison-table td:nth-child(3)::before {
+    content: "Agency";
+    color: #aaa;
+    font-weight: 500;
+  }
+
+  .comparison-table td:nth-child(4)::before {
+    content: "Freelancer";
+    color: #aaa;
+    font-weight: 500;
+  }
+
+  .comparison-table td::before {
+    font-size: 12px;
+  }
+
+  /* Align check / cross */
+  .comparison-table .check {
+    color: #c9a45c;
+    font-size: 14px;
+  }
+
+  .comparison-table .cross {
+    color: #777;
+    font-size: 14px;
+  }
+
+  /* Highlight Rise Arc column */
+  .comparison-table .highlight-col {
+    background: rgba(201, 164, 92, 0.08);
+    border-radius: 8px;
+    padding: 6px 8px;
+  }
+}
+/* Brighten ONLY Core Values heading */
+.core-values .section-title {
+  color: #eaeaea; /* dark white */
+}
+/* =====================================
+   SERVICES SECTION NOTE: DARK MODE
+   (ONLY this section)
+===================================== */
+
+#services {
+  background: #0b0b0b; /* dark background */
+}
+
+/* Heading */
+#services .section-title {
+  color: #f2f2f2; /* bright dark-white */
+}
+
+/* Gold highlighted word */
+#services .section-title .gold-text {
+  color: #c9a45c; /* premium gold */
+}
+
+/* Subtitle */
+#services .section-subtitle {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Service cards */
+#services .service-card {
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Card title */
+#services .card-title {
+  color: #f5f5f5;
+}
+
+/* Card description */
+#services .card-desc {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Icons */
+#services .icon-box svg {
+  stroke: #c9a45c;
+}
+/* =====================================
+   OVERVIEW SECTION – DARK MODE
+   (ONLY this section)
+===================================== */
+
+.overview-section {
+  background: #0b0b0b;
+}
+
+/* Small top label */
+.overview-section .subheading {
+  color: #c9a45c; /* gold */
+  letter-spacing: 1px;
+}
+
+/* Main heading */
+.overview-section .heading-primary {
+  color: #f2f2f2; /* bright white */
+}
+
+/* Intro paragraph */
+.overview-section .intro-text {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* Cards */
+.overview-section .service-card {
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Card title */
+.overview-section .card-title {
+  color: #f5f5f5;
+}
+
+/* Card description */
+.overview-section .card-desc {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Icons */
+.overview-section .icon-box svg {
+  stroke: #c9a45c;
+}
+
+/* Read more link */
+.overview-section .read-more {
+  color: #c9a45c;
+}
+
+.overview-section .read-more svg {
+  stroke: #c9a45c;
+}
