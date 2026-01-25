@@ -16,10 +16,11 @@
 </head>
 <body class="about-page">
     
-             ============================================ -->
+             
    <nav class="navbar">
     <div class="container">
-     <a href="#home" class="navbar-logo">
+     <a href="index.html" class="navbar-logo">
+
       <span class="logo-main">
         <span class="rise">RISE</span> 
         <span class="arc">ARC</span>
@@ -47,8 +48,7 @@
   </nav>
 
             
-        </div>
-    </header>
+      
 
     <!-- Hero Section -->
     <section class="hero">
@@ -293,19 +293,17 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    var menuToggle = document.querySelector(".menu-toggle");
-    var navbarMenu = document.querySelector(".navbar-menu");
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navbarMenu = document.querySelector(".navbar-menu");
 
     if (menuToggle && navbarMenu) {
       menuToggle.addEventListener("click", function () {
         navbarMenu.classList.toggle("active");
-        console.log("Hamburger clicked");
       });
-    } else {
-      console.log("Menu elements not found");
     }
   });
 </script>
+
 
 
 

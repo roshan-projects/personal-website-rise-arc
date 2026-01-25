@@ -372,3 +372,16 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navbarMenu = document.querySelector(".navbar-menu");
+
+  if (!menuToggle || !navbarMenu) {
+    console.error("Navbar elements not found");
+    return;
+  }
+
+  menuToggle.addEventListener("click", function () {
+    navbarMenu.classList.toggle("active");
+  });
+});
