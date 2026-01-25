@@ -7221,102 +7221,6 @@ section { padding: 80px 0; }
    NAVBAR
 ========================= */
 /* NAVBAR */
-.navbar {
-  background-color: #000;
-  height: 72px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-
-/* FLEX WRAPPER */
-.navbar-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* 🔥 key */
-  width: 100%;
-}
-
-/* LOGO */
-.navbar-logo {
-  display: flex;
-  align-items: center;
-  height: 100px;
-}
-
-.navbar-logo-img {
-  max-height: 56px;     /* keep as-is */
-  width: auto;
-  display: block;
-  
-  transform: scale(1.5);   /* 🔥 ONLY SIZE INCREASE */
-  transform-origin: left center;
-  transform: scale(1.7);
-}
-
-
-
-/* MENU */
-.navbar-menu {
-  display: flex;
-  gap: 36px;
-  list-style: none;
-  margin-left: auto; /* 🔥 force right */
-}
-
-.navbar-menu a {
-  color: #fff;
-  font-size: 14px;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .navbar {
-    height: 60px;
-  }
-
-  .navbar-logo-img {
-    max-height: 44px;
-  }
-
-  .navbar-menu {
-    display: none;
-  }
-}
-/* NAVBAR stays fixed */
-.navbar {
-  background-color: #000;
-  height: 72px;
-  display: flex;
-  align-items: center;
-}
-
-/* LOGO WRAPPER */
-.navbar-logo {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  overflow: visible; /* allow visual scaling */
-}
-
-/* LOGO IMAGE – VISUAL SCALE ONLY */
-.navbar-logo-img {
-  max-height: 56px;        /* base size */
-  width: auto;
-  display: block;
-
-  transform: scale(1.25); /* 🔥 INCREASE VISIBILITY */
-  transform-origin: left center;
-}
-
-
-
-
-
-
 
 
 
@@ -7377,132 +7281,11 @@ section { padding: 80px 0; }
 
 
 
-
-
-
-
+/* MOBILE */
 /* =====================================
-   MOBILE VIEW ONLY (SAFE)
-===================================== */
-@media (max-width: 768px) {
+   MOBILE VIEW ONLY (FINAL FIX)
+=
 
-  /* ---------- NAVBAR ---------- */
-  .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: #000;
-    z-index: 9999;
-  }
-
-  .navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  /* HAMBURGER ICON */
-  .menu-toggle {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-  }
-
-  .menu-toggle span {
-    width: 26px;
-    height: 3px;
-    background: #fff;
-    border-radius: 3px;
-  }
-
-  /* MOBILE MENU */
-  .navbar-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: #ffffff;
-    flex-direction: column;
-    padding: 15px 0;
-    display: none;
-  }
-
-  .navbar-menu.active {
-    display: flex;
-    animation: slideDown 0.35s ease forwards;
-  }
-
-  .navbar-menu li {
-    padding: 14px 25px;
-    opacity: 0;
-    transform: translateY(-10px);
-    animation: fadeInUp 0.4s ease forwards;
-  }
-
-  /* ONE-BY-ONE MENU ANIMATION */
-  .navbar-menu li:nth-child(1) { animation-delay: 0.1s; }
-  .navbar-menu li:nth-child(2) { animation-delay: 0.2s; }
-  .navbar-menu li:nth-child(3) { animation-delay: 0.3s; }
-  .navbar-menu li:nth-child(4) { animation-delay: 0.4s; }
-  .navbar-menu li:nth-child(5) { animation-delay: 0.5s; }
-
-  .navbar-menu li a {
-    color: #000;
-    font-size: 16px;
-    font-weight: 500;
-  }
-
-  /* ---------- HERO SECTION ---------- */
-  h1 {
-    font-size: 26px;
-    line-height: 1.35;
-    text-align: center;
-    margin-top: 90px;
-  }
-
-  p {
-    font-size: 14px;
-    text-align: center;
-    opacity: 0.85;
-  }
-
-  /* ---------- SPLINE ANIMATION ---------- */
-  iframe.spline-full {
-    width: 100%;
-    height: 100vh;
-    display: block;
-    border: none;
-    position: relative;
-    z-index: 1;
-  }
-
-  /* Prevent overlap from navbar */
-  body {
-    padding-top: 70px;
-  }
-}
-
-/* =====================================
-   ANIMATIONS
-===================================== */
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 /* =====================================
    SERVICES SECTION – MOBILE ONLY
 ===================================== */
@@ -7820,3 +7603,6 @@ section { padding: 80px 0; }
 .overview-section .read-more svg {
   stroke: #c9a45c;
 }
+
+
+
