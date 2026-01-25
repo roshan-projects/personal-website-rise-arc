@@ -245,5 +245,22 @@
 </script>
 
 
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var menuToggle = document.querySelector(".menu-toggle");
+    var navbarMenu = document.querySelector(".navbar-menu");
+
+    if (menuToggle && navbarMenu) {
+      menuToggle.addEventListener("click", function () {
+        navbarMenu.classList.toggle("active");
+        console.log("Hamburger clicked");
+      });
+    } else {
+      console.log("Menu elements not found");
+    }
+  });
+</script>
+
 </body>
 </html>
