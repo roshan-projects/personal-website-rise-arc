@@ -7926,3 +7926,33 @@ section { padding: 80px 0; }
     display: block;
   }
 }
+/* =========================
+   DEFAULT (DESKTOP / PC)
+   ========================= */
+
+/* Show PC spline */
+.spline-pc {
+  display: block;
+}
+
+/* Hide mobile spline */
+.spline-mobile {
+  display: none;
+}
+
+
+/* =========================
+   MOBILE VIEW
+   ========================= */
+@media (max-width: 768px) {
+
+  /* Hide PC spline on mobile */
+  .spline-pc {
+    display: none;
+  }
+
+  /* Show mobile spline */
+  .spline-mobile {
+    display: block;
+  }
+}
