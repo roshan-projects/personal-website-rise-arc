@@ -7686,3 +7686,21 @@ section { padding: 80px 0; }
    MOBILE NAVBAR FIX (ONLY MOBILE)
    =============================== */
 
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+}
