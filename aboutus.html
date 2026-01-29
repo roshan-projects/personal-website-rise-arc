@@ -271,23 +271,6 @@
 
 
 
-<script>
-  const currentPage = window.location.pathname.split("/").pop();
-
-  // Navbar active
-  document.querySelectorAll(".navbar-menu a").forEach(link => {
-    if (link.getAttribute("href") === currentPage) {
-      link.parentElement.classList.add("active");
-    }
-  });
-
-  // Footer active
-  document.querySelectorAll(".footer-menu a").forEach(link => {
-    if (link.getAttribute("href") === currentPage) {
-      link.parentElement.classList.add("active");
-    }
-  });
-</script>
 
 
 
@@ -297,7 +280,7 @@
 
 
 
-<script src="script.js"></script>
+
 
 
 </body>
