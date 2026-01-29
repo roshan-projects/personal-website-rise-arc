@@ -372,10 +372,19 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-const toggle = document.getElementById("menuToggle");
-const menu = document.getElementById("navbarMenu");
+/* ===============================
+   MOBILE NAVBAR TOGGLE
+   =============================== */
 
-toggle.addEventListener("click", () => {
-  menu.classList.toggle("active");
+document.addEventListener("DOMContentLoaded", () => {
+  const mobileHamburger = document.getElementById("mobileHamburger");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  if (mobileHamburger && mobileMenu) {
+    mobileHamburger.addEventListener("click", () => {
+      mobileMenu.classList.toggle("active");
+    });
+  }
 });
+
 
