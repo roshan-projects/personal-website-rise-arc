@@ -7930,29 +7930,43 @@ section { padding: 80px 0; }
    DEFAULT (DESKTOP / PC)
    ========================= */
 
-/* Show PC spline */
+/* ===============================
+   SPLINE RESPONSIVE VISIBILITY
+   =============================== */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Common iframe styles */
+.hero iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ---------- DESKTOP DEFAULT ---------- */
 .spline-pc {
   display: block;
 }
 
-/* Hide mobile spline */
 .spline-mobile {
   display: none;
 }
 
-
-/* =========================
-   MOBILE VIEW
-   ========================= */
+/* ---------- MOBILE ONLY ---------- */
 @media (max-width: 768px) {
-
-  /* Hide PC spline on mobile */
   .spline-pc {
-    display: none;
+    display: none !important;
   }
 
-  /* Show mobile spline */
   .spline-mobile {
-    display: block;
+    display: block !important;
   }
 }
+
