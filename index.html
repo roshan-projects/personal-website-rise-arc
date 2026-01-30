@@ -123,25 +123,11 @@
 <!-- Spline Viewer Script -->
 <!-- HERO SPLINE -->
  <!-- HERO SECTION -->
+<!-- HERO SECTION -->
 <section class="hero">
-  <iframe
-    src="https://my.spline.design/claritystream-qOz9o9bBQvFjKvV0xbSpA7rx/"
-    frameborder="0"
-    allowfullscreen
-    class="spline-pc">
-  </iframe>
-
-
- <!-- MOBILE SPLINE ONLY -->
-  <iframe
-    src="https://my.spline.design/claritystream-qOz9o9bBQvFjKvV0xbSpA7rx/"
-    frameborder="0"
-    allowfullscreen
-    class="spline-mobile">
-  </iframe>
-
-
+  <div id="spline-container"></div>
 </section>
+
 
 
 
@@ -637,6 +623,28 @@
 
 
 
+<script>
+  const container = document.getElementById("spline-container");
+  const isMobile = window.innerWidth <= 768;
+
+  if (isMobile) {
+    // MOBILE → second URL style
+    container.innerHTML = `
+      <iframe
+        src="https://my.spline.design/claritystream-qOz9o9bBQvFjKvV0xbSpA7rx/"
+        allowfullscreen>
+      </iframe>
+    `;
+  } else {
+    // DESKTOP → first image style
+    container.innerHTML = `
+      <iframe
+        src="https://my.spline.design/claritystream-qOz9o9bBQvFjKvV0xbSpA7rx/"
+        allowfullscreen>
+      </iframe>
+    `;
+  }
+</script>
 
 
 
