@@ -8284,3 +8284,38 @@ html {
   }
 
 }
+/* ================= MOBILE LOGO SAME AS PC ================= */
+@media (max-width: 768px) {
+
+  /* Brand container */
+  .mobile-logo-main {
+    font-family: "Playfair Display", serif;   /* SAME font as PC */
+    letter-spacing: 2px;
+    display: flex;
+    gap: 6px;
+  }
+
+  /* RISE */
+  .mobile-rise {
+    font-size: 22px;
+    font-weight: 600;
+    color: #f5d27a; /* gold */
+  }
+
+  /* ARC */
+  .mobile-arc {
+    font-size: 22px;
+    font-weight: 600;
+    color: #f5d27a; /* gold */
+  }
+
+  /* Tagline */
+  .mobile-logo-tagline {
+    font-family: "Montserrat", sans-serif;   /* SAME as PC */
+    font-size: 9px;
+    letter-spacing: 3px;
+    margin-top: 4px;
+    color: rgba(245, 210, 122, 0.85);
+    text-transform: uppercase;
+  }
+}
