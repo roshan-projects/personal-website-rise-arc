@@ -8246,3 +8246,26 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+/* ===== MOBILE HERO TEXT : WHITE + GOLD ===== */
+@media (max-width: 768px) {
+
+  .hero-text-mobile h1 {
+    color: #ffffff;              /* pure white */
+    font-weight: 500;
+  }
+
+  .hero-text-mobile h1 span {
+    background: linear-gradient(
+      90deg,
+      #f5d27a,
+      #d4af37,
+      #f5d27a
+    );                            /* gold gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hero-text-mobile p {
+    color: rgba(255, 255, 255, 0.75); /* soft white */
+  }
+}
