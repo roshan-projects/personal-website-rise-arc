@@ -8269,3 +8269,18 @@ html {
     color: rgba(255, 255, 255, 0.75); /* soft white */
   }
 }
+/* ===== FIX HERO HEADING FLOW (MOBILE ONLY) ===== */
+@media (max-width: 768px) {
+
+  .hero-text-mobile h1 {
+    white-space: normal;          /* allow natural wrapping */
+    word-break: keep-all;         /* prevent ugly breaks */
+    text-wrap: balance;           /* modern balanced wrapping */
+    letter-spacing: 0.2px;        /* smoother line flow */
+
+    font-size: clamp(20px, 5.2vw, 28px);
+    line-height: 1.25;
+    max-width: 95%;
+  }
+
+}
