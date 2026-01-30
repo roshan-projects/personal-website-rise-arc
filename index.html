@@ -124,12 +124,44 @@
 <!-- HERO SPLINE -->
  <!-- HERO SECTION -->
 <!-- HERO SECTION -->
+<!-- HERO SECTION -->
 <section class="hero">
-  <div id="spline-container"></div>
+
+  <!-- PC SPLINE ONLY -->
+  <iframe
+    src="https://my.spline.design/claritystream-qOz9o9bBQvFjKvV0xbSpA7rx/"
+    frameborder="0"
+    allowfullscreen
+    class="spline-pc">
+  </iframe>
+
 </section>
 
 
 
+
+
+
+
+
+
+
+<!-- MOBILE TEXT ONLY -->
+<div class="hero-mobile-text">
+  <h1>Your Partner for Digital Growth & Innovation</h1>
+  <p>
+    Smart digital solutions designed to grow your brand and
+    scale your business.
+  </p>
+</div>
+
+<!-- MOBILE SPLINE -->
+<iframe
+  class="spline-mobile"
+  src="https://my.spline.design/claritystream-qOz9o9bBQvFjKvV0xbSpA7rx/"
+  frameborder="0"
+  allowfullscreen>
+</iframe>
 
 
 
@@ -623,28 +655,6 @@
 
 
 
-<script>
-  const container = document.getElementById("spline-container");
-  const isMobile = window.innerWidth <= 768;
-
-  if (isMobile) {
-    // MOBILE → second URL style
-    container.innerHTML = `
-      <iframe
-        src="https://my.spline.design/claritystream-qOz9o9bBQvFjKvV0xbSpA7rx/"
-        allowfullscreen>
-      </iframe>
-    `;
-  } else {
-    // DESKTOP → first image style
-    container.innerHTML = `
-      <iframe
-        src="https://my.spline.design/claritystream-qOz9o9bBQvFjKvV0xbSpA7rx/"
-        allowfullscreen>
-      </iframe>
-    `;
-  }
-</script>
 
 
 
