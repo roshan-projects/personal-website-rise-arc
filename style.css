@@ -9114,3 +9114,42 @@ body.services-page {
         display:none;
     }
 }
+
+
+
+/* ===== MOBILE NAVBAR FIX ===== */
+
+.mobile-nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:999;
+}
+
+/* Prevent content hiding behind fixed navbar */
+body{
+    margin:0;
+    padding-top:80px; /* 🔥 Adjust to your navbar height */
+}
+
+/* Remove extra hero spacing */
+.hero{
+    margin-top:0;
+}
+/* ===== FIX ONLY WHY CHOOSE US PAGE ===== */
+
+.why-choose-us-page{
+    margin:0;
+    padding-top:90px; /* match navbar height */
+}
+/* FIX ONLY WHY CHOOSE US PAGE */
+
+html{
+    margin:0;
+    padding:0;
+}
+
+.why-choose-us-page{
+    margin:0;
+}
