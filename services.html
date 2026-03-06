@@ -13,8 +13,98 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 />
     <style>
-body{
-    margin:0;
+/* ── SERVICES PAGE: NAVBAR FIX ── */
+
+/* 1. Fixed positioning - same as all other pages */
+.services-page .navbar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    margin-top: 0 !important;
+    padding: 16px 0 !important;
+    background: #000 !important;
+    z-index: 1000 !important;
+}
+
+/* 2. Container: logo left, menu right, both vertically centered */
+.services-page .navbar .container {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0 40px !important;
+    max-width: 1300px !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* 3. Logo block: column so tagline sits below RISE ARC */
+.services-page .navbar-logo {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-decoration: none !important;
+    line-height: 1 !important;
+}
+
+/* 4. RISE ARC text */
+.services-page .logo-main {
+    display: inline-flex !important;
+    gap: 6px !important;
+    font-family: 'Playfair Display', serif !important;
+    font-size: 1.75rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.1em !important;
+}
+.services-page .logo-main .rise {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+.services-page .logo-main .arc {
+    background: linear-gradient(180deg, #fff1b0, #c9a962, #9e6b1f) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+/* 5. Tagline - margin wiped by .navbar * { margin:0 } rule, restore it */
+.services-page .logo-tagline {
+    display: block !important;
+    margin-top: 10px !important;
+    font-size: 0.65rem !important;
+    letter-spacing: 0.25em !important;
+    color: #c9a962 !important;
+    -webkit-text-fill-color: #c9a962 !important;
+    text-transform: uppercase !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 400 !important;
+}
+
+/* 6. Nav menu */
+.services-page .navbar-menu {
+    display: flex !important;
+    align-items: center !important;
+    gap: 28px !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 8. Active nav link = gold (same as other pages) */
+.services-page .navbar-menu li.active a,
+.services-page .navbar-menu a.active {
+    color: #c9a962 !important;
+}
+.services-page .navbar-menu li.active a::after,
+.services-page .navbar-menu a.active::after {
+    width: 100% !important;
+}
+
+/* 7. Push content below fixed navbar */
+body.services-page .overview-section {
+    padding-top: 100px !important;
 }
 </style>
 
@@ -1118,7 +1208,7 @@ body{
     </li>
     <li>
       <i class="fa-solid fa-envelope"></i>
-      connectrisearc@gmail.com
+      <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="05666a6b6b606671776c7660647766456268646c692b666a68">[email&#160;protected]</a>
     </li>
   </ul>
 </div>
@@ -1137,7 +1227,7 @@ body{
 
 
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   const currentPage = window.location.pathname.split("/").pop();
 
   // Navbar active
@@ -1149,26 +1239,4 @@ body{
 
   // Footer active
   document.querySelectorAll(".footer-menu a").forEach(link => {
-    if (link.getAttribute("href") === currentPage) {
-      link.parentElement.classList.add("active");
-    }
-  });
-</script>
-
-
-
-
-
-
-
-<script src="data.js"></script>
-<script src="script.js"></script>
-
-
-
-
-
-
-
-</body>
-</html>
+    if

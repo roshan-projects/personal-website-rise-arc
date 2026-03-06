@@ -9031,7 +9031,10 @@ spline-viewer{
 /* ============================= */
 
 .services-page .navbar{
-    position:relative;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
     background:black;
 }
 
@@ -9039,6 +9042,9 @@ spline-viewer{
 .services-page .navbar .container{
     max-width:1300px;
     margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
 /* Prevent menu from wrapping */
@@ -9048,10 +9054,25 @@ spline-viewer{
     gap:28px;
 }
 
+/* Restore logo layout broken by .navbar * { margin: 0 } rule */
+.services-page .navbar-logo {
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+}
+.services-page .logo-tagline {
+    margin-top:4px !important;
+}
+
 /* Remove unwanted top space */
 .services-page{
     margin:0;
     padding:0;
+}
+/* Push page content below the fixed navbar */
+.services-page .overview-section:first-of-type,
+body.services-page > section:first-of-type {
+    padding-top: 80px;
 }
 html, body{
     margin:0;
